@@ -3,7 +3,7 @@ import time
 import webbrowser
 def job():
     url = 'https://www.youtube.com/watch?v=3Y5GDoLbeBs'
-    chrome_path = '/usr/bin/google-chrome %s'
+    chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
     webbrowser.get(chrome_path).open(url)
 
 def strconverter(num):
@@ -40,6 +40,7 @@ while True:
 #minute = input("Enter alarm minute(0-59)")
 
 str = strconverter(hour)+":"+strconverter(minute)
+
 print("alarm set for: " + str)
 
 schedule.every().day.at(str).do(job)
